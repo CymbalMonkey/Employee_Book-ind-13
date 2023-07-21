@@ -1,5 +1,5 @@
 public class Main {
-    public static final Employee[] employees = new Employee[10];
+    private static final Employee[] employees = new Employee[10];
 
     public static void main(String[] args) {
         employees[0] = new Employee("Лыткин Сергей", 1, 45_000);
@@ -27,8 +27,8 @@ public class Main {
         }
     }
 
-    public static int calculateMonthlyOfficeSalary() {
-        int sum = 0;
+    public static double calculateMonthlyOfficeSalary() {
+        double sum = 0;
         for (int i = 0; i < employees.length; i++) {
             sum = sum + employees[i].getSalary();
         }
@@ -55,7 +55,7 @@ public class Main {
         return maxSalEmp;
     }
 
-    public static int calculateAvgSalary() {
+    public static double calculateAvgSalary() {
         return calculateMonthlyOfficeSalary() / employees.length;
     }
 
