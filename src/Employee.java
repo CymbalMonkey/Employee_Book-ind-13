@@ -6,7 +6,7 @@ public class Employee {
     private double salary;
 
     private static int COUNTER = 0;
-    int id;
+    private int id;
 
     public Employee(String fullName, int office, int salary) {
         this.fullName = fullName;
